@@ -222,7 +222,16 @@ ul.dropdown-menu>li>a>i.fa {
 li {
     list-style-type: square;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1 {
+    font: normal 135% 'century gothic', arial, sans-serif;
+    color: #000000;
+    margin: 0 0 0 0;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+}
+
+h2, h3, h4, h5, h6 {
     font: normal 165% 'century gothic', arial, sans-serif;
     color: #000000;
     margin: 0 0 0 0;
@@ -236,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sort-link {
           cursor: pointer;
-          color: green;
+          color: black;
           text-decoration: underline;
           margin-right: 10px;
 }
