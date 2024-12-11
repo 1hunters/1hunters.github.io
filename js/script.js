@@ -1,18 +1,29 @@
+let globalRankingState = ''
+let paperStates = []
+
 function updatePaperNumbers() {
-    const p_items = document.querySelectorAll('.paper');
-    const p_itemCount = p_items.length;
-    p_items.forEach((item, index) => {
-        let reverseNumber = p_itemCount - index;
+    const pItems = document.querySelectorAll('.paper');
+    const pItemCount = pItems.length;
+    pItems.forEach((item, index) => {
+        let reverseNumber = pItemCount - index;
         item.innerHTML = item.innerHTML.replace(/<strong>\[\d+\]<\/strong>\s*/, '');
         item.innerHTML = `<strong>[${reverseNumber}]</strong> ` + item.innerHTML;
     });
 }
 
-function sortPapers(criteria) {
+function saveOriginalStates() {
     let paperList = document.getElementById("paperList");
-    let papers = Array.from(paperList.children);
+    paperStates = Array.from(paperList.children);
+}
+
+function sortPapers(criteria) {
+    let papers = Array.from(paperStates);
 
     if (criteria === 'author') {
+        if (globalRankingState === 'sortByAuthor') {
+            return 0;
+        }
+
         setActiveSort('sortByAuthor');
         papers.sort((a, b) => {
             let firstAuthorA = a.getAttribute("data-first-author") === 'true' ? 1 : 0;
@@ -31,6 +42,10 @@ function sortPapers(criteria) {
             return b.getAttribute("data-year") - a.getAttribute("data-year");
         });
     } else if (criteria === 'year') {
+        if (globalRankingState === 'sortByYear') {
+            return 0;
+        }
+        
         setActiveSort('sortByYear');
         papers.sort((a, b) => {
             return b.getAttribute("data-year") - a.getAttribute("data-year");
@@ -44,9 +59,11 @@ function sortPapers(criteria) {
 }
 
 function setActiveSort(activeId) {
+    globalRankingState = activeId;
     document.querySelectorAll('.sort-link').forEach(link => link.classList.remove('active'));
     document.getElementById(activeId).classList.add('active');
 }
 
 setActiveSort('sortByYear');
+saveOriginalStates();
 updatePaperNumbers();
