@@ -26,18 +26,18 @@ function sortPapers(criteria) {
 
         setActiveSort('sortByAuthor');
         papers.sort((a, b) => {
-            let firstAuthorA = a.getAttribute("data-first-author") === 'true' ? 1 : 0;
-            let firstAuthorB = b.getAttribute("data-first-author") === 'true' ? 1 : 0;
+            let paperA = -a.getAttribute("paper-weighting");
+            let paperB = -b.getAttribute("paper-weighting");
 
-            if (firstAuthorB - firstAuthorA !== 0) {
-                return firstAuthorB - firstAuthorA;
+            if (paperB - paperA !== 0) {
+                return paperB - paperA;
             }
 
-            if (b.hasAttribute("data-first-coauthor")) {
-                if (!a.hasAttribute("data-first-coauthor")) {
-                    return -a.getAttribute("data-year");
-                }
-            }
+            // if (b.hasAttribute("data-first-coauthor")) {
+            //     if (!a.hasAttribute("data-first-coauthor")) {
+            //         return -a.getAttribute("data-year");
+            //     }
+            // }
             
             return b.getAttribute("data-year") - a.getAttribute("data-year");
         });
