@@ -14,14 +14,26 @@
 	<![endif]-->
 
   <!-- Le styles -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/syntax.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link href="assets/css/syntax.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
+
+  <!-- Theme Toggle - Fixed Position -->
+  <div id="theme-toggle-container">
+    <label class="theme-switch" aria-label="Toggle theme">
+      <input type="checkbox" id="theme-toggle">
+      <span class="theme-slider">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+      </span>
+    </label>
+  </div>
 
   <div class="ccontent">
     <div class="content heading">
@@ -32,12 +44,29 @@
         <h1>Chen Tang 唐辰</h1>
         <p>Ph.D. student, MMLab, The Chinese University of Hong Kong</p>
         <!-- <p>Department of Computer Science and Technology, Tsinghua University</p> -->
+        <!-- <p>Shenzhen International Graduate School, Tsinghua University</p> -->
         <p>chentang [AT] link.cuhk.edu.hk / tangchen18 [AT] outlook.com</p>
-        <p> [<a href="https://scholar.google.com/citations?user=WjZUs1AAAAAJ&hl=en" target="_blank">Google
-            Scholar</a>]
-          [<a href="https://openreview.net/profile?id=~Chen_Tang3" target="_blank">OpenReview</a>]
-          [<a href="https://www.linkedin.com/in/chen-tang-99733025b/" target="_blank">LinkedIn</a>]
-          [<a href="https://github.com/1hunters" target="_blank">GitHub</a>]</p>
+        <p class="contact-links">
+          <a href="https://scholar.google.com/citations?user=WjZUs1AAAAAJ&hl=en" target="_blank" class="contact-link" title="Google Scholar">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4285F4"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+            <span>Google Scholar</span>
+          </a>
+
+          <a href="https://openreview.net/profile?id=~Chen_Tang3" target="_blank" class="contact-link" title="OpenReview">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#B31B1B"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/><path d="M8 13h8v1H8zm0 2h8v1H8zm0 2h5v1H8z"/></svg>
+            <span>OpenReview</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/chen-tang-99733025b/" target="_blank" class="contact-link" title="LinkedIn">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://github.com/1hunters" target="_blank" class="contact-link" title="GitHub">
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181717"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span>GitHub</span>
+          </a>
+        </p>
       </div>
     </div>
     
@@ -57,13 +86,13 @@
           href="https://www.mmlab.top" target="_blank">Zhi Wang</a>. 
         I won the Distinguished Master's Thesis Award of Tsinghua. 
       </p> 
-      <p>
+      <!-- <p>
         I was a visiting student at AIoT Lab, <a href="https://air.tsinghua.edu.cn/en/" target="_blank">Institute for AI Industry Research (AIR)</a> at Tsinghua University, working with Prof. <a href="https://yuanchun-li.github.io/" target="_blank">Yuanchun Li</a> and Prof. <a href="https://yunxinliu.github.io/" target="_blank">Yunxin Liu</a>. 
         Prior to that, I spent a wonderful year as a research intern in the <a
           href="https://www.microsoft.com/en-us/research/group/systems-and-networking-research-group-asia/"
           target="_blank">System and Networking Research Group</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" target="_blank">Microsoft Research Asia</a>, working with Dr. <a href="https://www.microsoft.com/en-us/research/people/lzhani/" target="_blank">Li Lyna Zhang</a>. 
         I am a member of the <a href="https://sagroups.ieee.org/3161/members/" target="_blank">IEEE Digital Retina Systems Working Group (3161 WG)</a>, and have served as a reviewer for CVPR, ECCV, ICCV, ACM Multimedia, ICML, ICLR, NeurIPS, and AAAI. 
-      </p>
+      </p> -->
       <p>
         My research interests are in AI for science, efficient learning, multimodal learning, and generative learning. Feel free to contact me if you are interested in my research. 
       </p>
@@ -145,92 +174,109 @@
         <a id="sortByYear" class="sort-link" onclick="sortPapers('year')">[Sort by year]</a>
         <a id="sortByAuthor" class="sort-link" onclick="sortPapers('author')">[Sort by authorship]</a>
         <a id="fullPubs" class="sort-link" href="https://scholar.google.com/citations?user=WjZUs1AAAAAJ&hl=en" target="_blank">[Full Publications]</a> 
-        (*: Equal contributions) 
+        (*: Equal contribution, #: Corresponding author) 
       </header>
       <br>
       <ul style="padding-left:2em" id="paperList">
 
+        <li data-year="2026" paper-weighting=1.5>
+          <p class="paper"><strong>Tail-Aware Post-Training Quantization for 3D Geometry Models</strong><br>
+          <font color="#777777">Sicheng Pan*, <span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Yang Ke, Weixiang Zhang, Jiawei Li, Bin Chen, Shu-Tao Xia, Zhi Wang</font><br>
+          <span class="venue"><em>Preprint</em>, 2026</span>
+          [<a href="https://arxiv.org/pdf/2602.01741" target="_blank">PDF</a>] 
+          </p>
+        </li>
+
+        <li data-year="2026" paper-weighting=1.5>
+          <p class="paper"><strong>SciIF: Benchmarking Scientific Instruction Following Towards Rigorous Scientific Intelligence</strong><br>
+          <font color="#777777">Encheng Su, Jianyu Wu, Lintao Wang, Pengze Li, Aoran Wang, Jinouwen Zhang, Yizhou Wang, Yuan Meng, <span class="author-name"><strong><u>Chen Tang#</u></strong></span>, Xinzhu Ma, Shixiang Tang, Houqiang Li</font><br>
+          <span class="venue"><em>Preprint</em>, 2026</span>
+          [<a href="https://arxiv.org/pdf/2601.04770" target="_blank">PDF</a>] 
+          [<a href="https://github.com/suencgo/SciIF" target="_blank">Code</a>]
+          </p>
+        </li>
+
         <li data-year="2025" paper-weighting=1>
           <p class="paper"><strong>SciReasoner: Laying the Scientific Language Ground across Disciplines</strong><br>
-          Science Center, Shanghai Artificial Intelligence Laboratory <br>
-          <em>Technical report</em>, 2025
+          <font color="#777777">Science Center, Shanghai Artificial Intelligence Laboratory</font><br>
+          <span class="venue"><em>Technical report</em>, 2025</span>
           [<a href="https://arxiv.org/pdf/2509.21320" target="_blank">PDF</a>] 
           [<a href="https://huggingface.co/SciReason" target="_blank">Model & Data</a>] 
           [<a href="https://github.com/open-sciencelab/SciReason" target="_blank">Code</a>] 
           </p>
         </li>
 
-        <li data-year="2025" paper-weighting=30>
+         <li data-year="2025" paper-weighting=6>
+          <p class="paper"><strong>SizeGS: Size-aware Compression of 3D Gaussian Splatting via Mixed Integer Programming</strong><br>
+          <font color="#777777">Shuzhao Xie, Jiahang Liu, Weixiang Zhang, Shijia Ge, Sicheng Pan, <span class="author-name"><strong><u>Chen Tang</u></strong></span</span>, Yunpeng Bai, Cong Zhang, Xiaoyi Fan, Zhi Wang</font><br>
+          <span class="venue">[ACM MM'25] <em>ACM International Conference on Multimedia</em> (Best Paper Nomination), 2025</span>
+          [<a href="https://arxiv.org/pdf/2412.05808" target="_blank">PDF</a>] 
+          [<a href="https://github.com/mmlab-sigs/sizegs" target="_blank">Code</a>] 
+          </p>
+        </li>
+
+        <!-- <li data-year="2025" paper-weighting=30>
           <p class="paper"><strong>A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers</strong><br>
           Science Center, Shanghai Artificial Intelligence Laboratory <br>
           <em>Preprint</em>, 2025
           [<a href="https://arxiv.org/pdf/2508.21148" target="_blank">PDF</a>] 
           [<a href="https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs" target="_blank">Repo</a>] 
           </p>
-        </li>
+        </li> -->
         
-        <li data-year="2025" paper-weighting=6>
+        <!-- <li data-year="2025" paper-weighting=6>
           <p class="paper"><strong>Accelerating Parallel Diffusion Model Serving with Residual Compression</strong><br>
             Jiajun Luo, Yicheng Xiao, Jianru Xu, Yangxiu You, Rongwei Lu, <strong><u>Chen Tang</u></strong>, Jingyan Jiang, Zhi Wang <br>
             [NeurIPS'25] <em>Conference on Neural Information Processing Systems</em>, 2025
             [<a href="https://arxiv.org/pdf/2507.17511" target="_blank">PDF</a>] 
             [<a href="https://github.com/Cobalt-27/CompactFusion" target="_blank">Code</a>] 
           </p>
-        </li>
+        </li> -->
 
-         <li data-year="2025" paper-weighting=6>
+         <!-- <li data-year="2025" paper-weighting=6>
           <p class="paper"><strong>SP-VLA: A Joint Model Scheduling and Token Pruning Approach for VLA Model Acceleration</strong><br>
             Ye Li, Yuan Meng, Zewen Sun, Kangye Ji, <strong><u>Chen Tang</u></strong>, Jiajun Fan, Xinzhu Ma, Shutao Xia, Zhi Wang, Wenwu Zhu <br>
             <em>Preprint</em>, 2025
             [<a href="https://arxiv.org/pdf/2506.12723" target="_blank">PDF</a>]
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2025" paper-weighting=6>
+        <!-- <li data-year="2025" paper-weighting=6>
           <p class="paper"><strong>SizeGS: Size-aware Compression of 3D Gaussian Splatting via Mixed Integer Programming</strong><br>
             Shuzhao Xie, Jiahang Liu, Weixiang Zhang, Shijia Ge, Sicheng Pan, <strong><u>Chen Tang</u></strong>, Yunpeng Bai, Cong Zhang, Xiaoyi Fan, Zhi Wang <br>
-            [ACM MM'25] <em>ACM International Conference on Multimedia</em>, 2025
+            [ACM MM'25] <em>ACM International Conference on Multimedia</em> (Best Paper Nomination), 2025 
             [<a href="https://arxiv.org/pdf/2412.05808" target="_blank">PDF</a>] 
             [<a href="https://shuzhaoxie.github.io/sizegs" target="_blank">Project</a>] 
             [<a href="https://github.com/mmlab-sigs/sizegs" target="_blank">Code</a>] 
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2025" paper-weighting=3>
+        <!-- <li data-year="2025" paper-weighting=3>
           <p class="paper"><strong>GAQAT: Gradient-adaptive Quantization-aware Training for Domain Generalization</strong><br>
             Jiacheng Jiang, Yuan Meng, <strong><u>Chen Tang</u></strong>, Han Yu, Qun Li, Zhi Wang, Wenwu Zhu <br>
             [ACM MM'25] <em>ACM International Conference on Multimedia</em>, 2025
             [<a href="https://arxiv.org/pdf/2412.05551" target="_blank">PDF</a>]
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2025" paper-weighting=6>
+        <!-- <li data-year="2025" paper-weighting=6>
           <p class="paper"><strong>DICE: Staleness-Centric Optimizations for Parallel Diffusion MoE Inference</strong><br>
             Jiajun Luo, Lizhuo Luo, Jianru Xu, Jiajun Song, Rongwei Lu, <strong><u>Chen Tang</u></strong>, Zhi Wang <br>
             [ICCV'25] <em>International Conference on Computer Vision</em>, 2025
             [<a href="https://arxiv.org/pdf/2411.16786" target="_blank">PDF</a>]
           </p>
-        </li>
+        </li> -->
 
         <li data-year="2025" paper-weighting=1.5>
           <p class="paper"><strong>Breaking the Curse of Knowledge: Towards Effective Multimodal Recommendation using Knowledge Soft Integration</strong><br>
-            Kai Ouyang*, <strong><u>Chen Tang</u></strong>*, Wenhao Zheng, Xiangjin Xie, Xuanji Xiao, Jian Dong, Hai-tao Zheng,
-            Zhi Wang<br>
-            [IEEE TMM] <em>IEEE Transactions on Multimedia (TMM)</em>, 2025
+            <font color="#777777">Kai Ouyang*, <span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Wenhao Zheng, Xiangjin Xie, Xuanji Xiao, Jian Dong, Hai-tao Zheng,
+            Zhi Wang</font><br>
+            <span class="venue">[IEEE TMM] <em>IEEE Transactions on Multimedia</em>, 2025</span>
             [<a href="https://arxiv.org/pdf/2305.07419.pdf" target="_blank">PDF</a>]
           </p>
         </li>
 
-        <li data-year="2025" paper-weighting=1>
-          <p class="paper"><strong>UniSTD: Towards Unified Spatio-Temporal Prediction across Diverse Disciplines</strong><br>
-            <strong><u>Chen Tang</u></strong>, Xinzhu Ma, Encheng Su, Xiufeng Song, Xiaohong Liu, Wei-Hong Li, Lei Bai, Wanli Ouyang, Xiangyu Yue<br>
-            [CVPR'25] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2025
-            [<a href="https://arxiv.org/pdf/2503.20748" target="_blank">PDF</a>] 
-            [<a href="https://github.com/1hunters/UniSTD" target="_blank">Code</a>] 
-          </p>
-        </li>
-
-        <li data-year="2025" paper-weighting=5>
+        <!-- <li data-year="2025" paper-weighting=5>
           <p class="paper"><strong>EVOS: Efficient Implicit Neural Training via EVOlutionary Selector</strong><br>
             Weixiang Zhang, Shuzhao Xie, Chengwei Ren, Siyi Xie, <strong><u>Chen Tang</u></strong>, Shijia Ge, Mingzi Wang, Zhi Wang<br>
             [CVPR'25] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2025
@@ -238,9 +284,9 @@
             [<a href="https://weixiang-zhang.github.io/proj-evos/" target="_blank">Project</a>] 
             [<a href="https://github.com/zwx-open/EVOS-INR" target="_blank">Code</a>] 
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2025" paper-weighting=3>
+        <!-- <li data-year="2025" paper-weighting=3>
           <p class="paper"><strong>Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers</strong><br>
             Lei Chen, Yuan Meng, <strong><u>Chen Tang</u></strong>, Xinzhu Ma, Jingyan Jiang, Xin Wang, Zhi Wang, Wenwu Zhu<br>
             [CVPR'25] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2025
@@ -248,18 +294,27 @@
             [<a href="https://q-dit.github.io/" target="_blank">Project</a>] 
             [<a href="https://github.com/Juanerx/Q-DiT/" target="_blank">Code</a>]
           </p>
+        </li> -->
+
+        <li data-year="2025" paper-weighting=1>
+          <p class="paper"><strong>UniSTD: Towards Unified Spatio-Temporal Prediction across Diverse Disciplines</strong><br>
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong></span>, Xinzhu Ma, Encheng Su, Xiufeng Song, Xiaohong Liu, Wei-Hong Li, Lei Bai, Wanli Ouyang, Xiangyu Yue</font><br>
+            <span class="venue">[CVPR'25] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2025</span>
+            [<a href="https://arxiv.org/pdf/2503.20748" target="_blank">PDF</a>] 
+            [<a href="https://github.com/1hunters/UniSTD" target="_blank">Code</a>] 
+          </p>
         </li>
 
-        <li data-year="2025" paper-weighting=3>
+        <!-- <li data-year="2025" paper-weighting=3>
           <p class="paper"><strong>JAQ: Joint Efficient Architecture Design and Low-Bit Quantization with Hardware-Software Co-Exploration</strong><br>
             Mingzi Wang, Yuan Meng, <strong><u>Chen Tang</u></strong>, Weixiang Zhang, Yijian Qin, Yang Yao, Yingxin Li, Tongtong Feng, Xin Wang, Xun Guan, Zhi Wang, Wenwu Zhu<br>
             [AAAI'25] <em>The AAAI Conference on Artificial Intelligence</em>, 2025
             [<a href="https://arxiv.org/pdf/2501.05339" target="_blank">PDF</a>] 
             [<a href="https://github.com/wmz-opensource/JAQ/" target="_blank">Code</a>] 
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2025" paper-weighting=2>
+        <!-- <li data-year="2025" paper-weighting=2>
           <p class="paper"><strong>STAR: Skeleton-aware Text-based 4D Avatar Generation with In-Network Motion Retargeting</strong><br>
             Zenghao Chai, <strong><u>Chen Tang</u></strong>, Yongkang Wong, Mohan Kankanhalli<br>
             [IEEE TVCG] <em>IEEE Transactions on Visualization and Computer Graphics (TVCG)</em>, 2025
@@ -267,35 +322,35 @@
             [<a href="https://star-avatar.github.io/" target="_blank">Project</a>]
             [<a href="https://github.com/czh-98/STAR" target="_blank">Code</a>]
           </p>
-        </li>
+        </li> -->
                 
-        <li data-year="2025" paper-weighting=5>
+        <!-- <li data-year="2025" paper-weighting=5>
           <p class="paper"><strong>Expansive Supervision for Neural Radiance Field</strong><br>
             Weixiang Zhang, Shuzhao Xie, Shijia Ge, Wei Yao, <strong><u>Chen Tang</u></strong>, Zhi Wang<br>
             [ICME'25] <em>IEEE International Conference on Multimedia & Expo</em>, 2025
             [<a href="https://arxiv.org/pdf/2409.08056" target="_blank">PDF</a>] 
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2024" paper-weighting=4>
+        <!-- <li data-year="2024" paper-weighting=4>
           <p class="paper"><strong>Data-Aware Gradient Compression for FL in Communication-Constrained Mobile Computing</strong><br>
             Rongwei Lu, Yutong Jiang, Yinan Mao, <strong><u>Chen Tang</u></strong>, Bin Chen, Laizhong Cui, Zhi Wang<br>
             [IEEE TMC] <em>IEEE Transactions on Mobile Computing (TMC)</em>, 2024
             [<a href="https://arxiv.org/pdf/2311.07324" target="_blank">PDF</a>]  
             [<a href="https://github.com/Jiang-Yutong/DAGC" target="_blank">Code</a>]
           </p>
-        </li>
+        </li> -->
 
         <li data-year="2024" paper-weighting=1.5>
           <p class="paper"><strong>PRANCE: Joint Token-Optimization and Structural Channel-Pruning for Adaptive ViT Inference</strong><br>
-            Ye Li*, <strong><u>Chen Tang</u></strong>*, Yuan Meng, Jiajun Fan, Zenghao Chai, Xinzhu Ma, Zhi Wang, Wenwu Zhu<br>
-            [IEEE TPAMI] <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2024
+            <font color="#777777">Ye Li*, <span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Yuan Meng, Jiajun Fan, Zenghao Chai, Xinzhu Ma, Zhi Wang, Wenwu Zhu</font><br> 
+            <span class="venue">[IEEE TPAMI] <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 2024</span>
             [<a href="https://arxiv.org/pdf/2407.05010" target="_blank">PDF</a>] 
             [<a href="https://github.com/ChildTang/PRANCE" target="_blank">Code</a>] 
           </p>
         </li>
 
-        <li data-year="2024" paper-weighting=3>
+        <!-- <li data-year="2024" paper-weighting=3>
           <p class="paper"><strong>MesonGS: Post-training Compression of 3D Gaussians via Efficient Attribute Transformation
           </strong><br>
             Shuzhao Xie, Weixiang Zhang, <strong><u>Chen Tang</u></strong>, Yunpeng Bai, Rongwei Lu, Shijia Ge, Zhi Wang<br>
@@ -306,13 +361,13 @@
             [<a href="./assets/poster/ECCV24_MesonGS_poster.pdf" target="_blank">Poster</a>] 
             [<a href="https://github.com/ShuzhaoXie/MesonGS" target="_blank">Code</a>] 
           </p>
-        </li>
+        </li> -->
 
         <li data-year="2024" paper-weighting=1>
           <p class="paper"><strong>RFQuant: Retraining-free Model Quantization via One-Shot Weight-Coupling Learning</strong><br>
-            <strong><u>Chen Tang</u></strong>*, Yuan Meng*, Jiacheng Jiang, Shuzhao Xie, Rongwei Lu, Xinzhu Ma, Zhi Wang, Wenwu
-            Zhu<br>
-            [CVPR'24] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2024
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Yuan Meng*, Jiacheng Jiang, Shuzhao Xie, Rongwei Lu, Xinzhu Ma, Zhi Wang, Wenwu
+            Zhu</font><br>
+            <span class="venue">[CVPR'24] <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2024</span>
             [<a href="./assets/paper/CVPR_retraining_free_quantization.pdf" target="_blank">PDF</a>] 
             [<a href="./assets/paper/CVPR_retraining_free_quantization_suppl.pdf" target="_blank">Supp</a>] 
             [<a href="./assets/poster/CVPR24_retraining_free_quantization_poster.pdf" target="_blank">Poster</a>] 
@@ -320,7 +375,7 @@
           </p>
         </li>
 
-        <li data-year="2024" paper-weighting=4>
+        <!-- <li data-year="2024" paper-weighting=4>
           <p class="paper"><strong>One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient
               Deployments</strong><br>
             Ke Yi, Yuhui Xu, Heng Chang, <strong><u>Chen Tang</u></strong>, Yuan Meng, Tong Zhang, Jia Li<br>
@@ -328,13 +383,13 @@
             [<a href="https://arxiv.org/pdf/2405.20202" target="_blank">PDF</a>]
             [<a href="#" target="_blank">Code</a>]
           </p>
-        </li>
+        </li> -->
         
         <li data-year="2024" paper-weighting=1.5>
           <p class="paper"><strong>TMPQ-DM: Joint Timestep Reduction and Quantization Precision
               Selection for Efficient Diffusion Models</strong><br>
-            Haojun Sun*, <strong><u>Chen Tang</u></strong>*, Zhi Wang, Yuan Meng, Jingyan Jiang, Xinzhu Ma, Wenwu Zhu<br>
-            <em>Preprint</em>, 2024
+            <font color="#777777">Haojun Sun*, <span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Zhi Wang, Yuan Meng, Jingyan Jiang, Xinzhu Ma, Wenwu Zhu</font><br>
+            <span class="venue"><em>Preprint</em>, 2024</span>
             [<a href="https://arxiv.org/pdf/2404.09532.pdf" target="_blank">PDF</a>]
             [<a
               href="https://mmlabsigs.notion.site/TMPQ-DM-Joint-Timestep-Reduction-and-Quantization-Precision-Selection-for-Efficient-Diffusion-Model-ea0af24bd3ef4929a1bc07c364ce4ac5?pvs=74"
@@ -343,7 +398,7 @@
           </p>
         </li>
 
-        <li data-year="2024" paper-weighting=7>
+        <!-- <li data-year="2024" paper-weighting=7>
           <p class="paper"><strong>Evaluating the Generalization Ability of Quantized LLMs: Benchmark, Analysis, and
               Toolbox</strong><br>
             Yijun Liu, Yuan Meng, Fang Wu, Shenhao Peng, Hang Yao, Chaoyu Guan, <strong><u>Chen Tang</u></strong>, Xinzhu Ma,
@@ -352,18 +407,18 @@
             [<a href="https://arxiv.org/pdf/2406.12928" target="_blank">PDF</a>]
             [<a href="https://github.com/TsingmaoAI/MI-optimize" target="_blank">Toolbox</a>]
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2024" paper-weighting=3>
+        <!-- <li data-year="2024" paper-weighting=3>
           <p class="paper"><strong>Investigating the Impact of Quantization on Adversarial Robustness</strong><br>
             Qun Li, Yuan Meng, <strong><u>Chen Tang</u></strong>, Jiacheng Jiang, Zhi Wang<br>
             [ICLRW'24] <em>International Conference on Learning Representations (Workshop on Practical ML
               for Limited Resource Settings)</em>, 2024
             [<a href="https://arxiv.org/pdf/2404.05639.pdf" target="_blank">PDF</a>]
           </p>
-        </li>
+        </li> -->
 
-        <li data-year="2023" paper-weighting=3>
+        <!-- <li data-year="2023" paper-weighting=3>
           <p class="paper"><strong>Click-aware Structure Transfer with Sample Weight Assignment for Post-Click
               Conversion Rate
               Estimation</strong><br>
@@ -372,21 +427,21 @@
               Discovery in Databases</em>, 2023 [<a href="https://arxiv.org/pdf/2304.01169.pdf" target="_blank">PDF</a>]
             [<a href="https://github.com/OuyKai/CSTWA" target="_blank">Code</a>]
           </p>
-        </li>
+        </li> -->
 
         <li data-year="2023" paper-weighting=1>
           <p class="paper"><strong>SEAM: Searching Transferable Mixed-Precision Quantization Policy through Large Margin Regularization</strong><br>
-            <strong><u>Chen Tang</u></strong>, Kai Ouyang, Zenghao Chai, Yunpeng Bai, Yuan Meng, Zhi Wang, Wenwu Zhu<br>
-            [ACM MM'23] <em>ACM International Conference on Multimedia</em>, 2023
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong></span>, Kai Ouyang, Zenghao Chai, Yunpeng Bai, Yuan Meng, Zhi Wang, Wenwu Zhu</font><br>
+            <span class="venue">[ACM MM'23] <em>ACM International Conference on Multimedia</em>, 2023</span>
             [<a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611975" target="_blank">PDF</a>]
           </p>
         </li>
 
         <li data-year="2023" paper-weighting=1>
           <p class="paper"><strong>ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse Mobile Devices</strong><br>
-            <strong><u>Chen Tang</u></strong>*, Li Lyna Zhang*, Huiqiang Jiang, Jiahang
-            Xu, Ting Cao, Quanlu Zhang, Yuqing Yang, Zhi Wang, Mao Yang<br>
-            [ICCV'23] <em>International Conference on Computer Vision</em>, 2023
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Li Lyna Zhang*, Huiqiang Jiang, Jiahang
+            Xu, Ting Cao, Quanlu Zhang, Yuqing Yang, Zhi Wang, Mao Yang</font><br>
+            <span class="venue">[ICCV'23] <em>International Conference on Computer Vision</em>, 2023</span>
             [<a
               href="https://openaccess.thecvf.com/content/ICCV2023/papers/Tang_ElasticViT_Conflict-aware_Supernet_Training_for_Deploying_Fast_Vision_Transformer_on_ICCV_2023_paper.pdf"
               target="_blank">PDF</a>]
@@ -401,9 +456,9 @@
 
         <li data-year="2022" paper-weighting=1>
           <p class="paper"><strong>Mixed-Precision Network Quantization via Learned Layer-wise Importance</strong><br>
-            <strong><u>Chen Tang</u></strong>*, Kai Ouyang*, Zhi Wang, Yifei Zhu, Wen Ji,
-            Yaowei Wang, Wenwu Zhu<br>
-            [ECCV'22] <em>European Conference on Computer Vision</em>, 2022
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong>*</span>, Kai Ouyang*, Zhi Wang, Yifei Zhu, Wen Ji,
+            Yaowei Wang, Wenwu Zhu</font><br>
+            <span class="venue">[ECCV'22] <em>European Conference on Computer Vision</em>, 2022</span>
             [<a href="https://arxiv.org/pdf/2203.08368.pdf" target="_blank">PDF</a>]
             [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136710260-supp.pdf"
               target="_blank">Supp</a>]
@@ -418,13 +473,13 @@
         <li data-year="2022" paper-weighting=1>
           <p class="paper"><strong>Arbitrary Bit-width Network: A Joint Layer-Wise Quantization and Adaptive Inference
               Approach</strong><br>
-            <strong><u>Chen Tang</u></strong>, Haoyu Zhai, Kai Ouyang, Zhi Wang, Yifei Zhu, Wenwu Zhu<br>
-            [ACM MM'22] <em>ACM International Conference on Multimedia</em>, 2022
+            <font color="#777777"><span class="author-name"><strong><u>Chen Tang</u></strong></span>, Haoyu Zhai, Kai Ouyang, Zhi Wang, Yifei Zhu, Wenwu Zhu</font><br>
+            <span class="venue">[ACM MM'22] <em>ACM International Conference on Multimedia</em>, 2022</span>
             [<a href="https://arxiv.org/pdf/2204.09992.pdf" target="_blank">PDF</a>]
           </p>
         </li>
 
-        <li data-year="2023" paper-weighting=3>
+        <!-- <li data-year="2023" paper-weighting=3>
           <p class="paper"><strong>Social-aware Sparse Attention Network for Session-based Social
               Recommendation</strong><br>
             Kai Ouyang, Xianghong Xu, <strong><u>Chen Tang</u></strong>, Wang Chen, Hai-tao Zheng<br>
@@ -432,7 +487,7 @@
               Processing</em>, 2022 [<a href="https://aclanthology.org/2022.findings-emnlp.159.pdf"
               target="_blank">PDF</a>]
           </p>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -475,7 +530,7 @@
       <ul style="padding-left:2em">
         <li>
           <p>
-            Reviewer (Program Committee): CVPR (2023, 2024, 2025), ECCV (2022, 2024), ICCV (2025), ACM Multimedia (2024, 2025), AAAI (2024), ICLR (2024, 2025), NeurIPS (2023, 2024, 2025), ICML (2025), ECAI (2023); Neural Networks
+            Reviewer (Program Committee): CVPR (2023, 2024, 2025, 2026), ECCV (2022, 2024), ICCV (2025), ACM Multimedia (2024, 2025), AAAI (2024), ICLR (2024, 2025, 2026), NeurIPS (2023, 2024, 2025), ICML (2025, 2026), ECAI (2023); Neural Networks
           </p>
         </li>
         <li>
@@ -487,9 +542,14 @@
 
     <div class="Rewards">
       <header>
-        <h1 style="color:#008B8B;"> Selected Rewards</h1>
+        <h1 style="color:#008B8B;"> Selected Awards</h1>
       </header>
       <ul style="padding-left:2em">
+         <li>
+          <p>
+            Best Paper Nomination, ACM Multimedia, 2025
+          </p>
+        </li>
         <li>
           <p>
             Distinguished Master's Thesis Award, Tsinghua University, 2023
@@ -528,9 +588,9 @@
     <p align="right"> Code from <a href="https://ancientmooner.github.io/" target="_blank">Han Hu</a></p>
   </div>
 
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>

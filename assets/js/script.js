@@ -2,13 +2,13 @@ let globalRankingState = ''
 let paperStates = []
 
 function updatePaperNumbers() {
-    const pItems = document.querySelectorAll('.paper');
-    const pItemCount = pItems.length;
-    pItems.forEach((item, index) => {
-        let reverseNumber = pItemCount - index;
-        item.innerHTML = item.innerHTML.replace(/<strong>\[\d+\]<\/strong>\s*/, '');
-        item.innerHTML = `<strong>[${reverseNumber}]</strong> ` + item.innerHTML;
-    });
+    // const pItems = document.querySelectorAll('.paper');
+    // const pItemCount = pItems.length;
+    // pItems.forEach((item, index) => {
+    //     let reverseNumber = pItemCount - index;
+    //     item.innerHTML = item.innerHTML.replace(/<strong>\[\d+\]<\/strong>\s*/, '');
+    //     item.innerHTML = `<strong>[${reverseNumber}]</strong> ` + item.innerHTML;
+    // });
 }
 
 function saveOriginalStates() {
@@ -67,3 +67,25 @@ function setActiveSort(activeId) {
 setActiveSort('sortByYear');
 saveOriginalStates();
 updatePaperNumbers();
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+function toggleDarkMode() {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDark);
+    themeToggle.checked = isDark;
+}
+
+// Load saved theme
+const savedDarkMode = localStorage.getItem('darkMode');
+if (savedDarkMode === 'true') {
+    body.classList.add('dark-mode');
+    themeToggle.checked = true;
+} else {
+    themeToggle.checked = false;
+}
+
+themeToggle.addEventListener('change', toggleDarkMode);
