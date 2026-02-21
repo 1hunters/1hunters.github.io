@@ -449,8 +449,9 @@ body.dark-mode .contact-link:hover {
 
 @media (max-width: 576px) {
     /* tighter spacing to keep links on a single line on most phones */
-    .contact-links { gap:6px; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }
-    .contact-link { padding:6px 8px; font-size:12px; min-width:0; }
+    .contact-links { gap:4px; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .contact-link { padding:5px 6px; font-size:11.5px; min-width:0; width:100px; justify-content:center; }
+    .contact-link span { white-space:nowrap; }
     .contact-icon { width:18px; height:18px; }
     .div_right { display:flex; flex-direction:column; }
     #theme-toggle-container { top: 15px; right: 15px; }
