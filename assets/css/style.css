@@ -517,16 +517,19 @@ body.dark-mode .section-nav-links a:hover {
 .theme-switch input:checked + .theme-slider .theme-icon.moon { opacity: 0; }
 
 @media (max-width: 576px) {
-    /* tighter spacing to keep links on a single line on most phones */
-    .contact-links { gap:6px; flex-wrap:wrap; overflow-x:visible; width:100%; max-width:100%; }
-    .contact-link { padding:5px 8px; font-size:11.5px; min-width:0; width:auto; max-width:100%; justify-content:center; }
+    /* force nav and contact links into single row on mobile */
+    .contact-links { gap:4px; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%; max-width:100%; min-width:0; }
+    .contact-link { flex:0 0 auto; padding:4px 7px; font-size:11px; min-width:0; width:auto; max-width:100%; justify-content:center; }
     .contact-link span { white-space:nowrap; }
+    .contact-link[title="Google Scholar"] span { font-size:0; }
+    .contact-link[title="Google Scholar"] span::after { content:"Scholar"; font-size:11px; }
     .contact-icon { width:18px; height:18px; }
     .div_right { display:flex; flex-direction:column; width:100%; min-width:0; }
     body.has-top-nav { padding-top: 72px; }
-    .section-nav { padding: 6px 8px; gap: 6px; flex-wrap: wrap; }
-    .section-nav-links { gap: 6px; flex-wrap: wrap; overflow-x: visible; }
-    .section-nav-links a { font-size: 13px; padding: 2px 5px; }
+    .section-nav { padding: 6px 8px; gap: 6px; flex-wrap: nowrap; align-items:center; }
+    .section-nav-links { gap: 6px; flex:1 1 auto; min-width:0; flex-wrap: nowrap; overflow-x: auto; }
+    .section-nav-links a { flex:0 0 auto; font-size: 12px; padding: 2px 5px; white-space:nowrap; }
+    #theme-toggle-container { flex:0 0 auto; margin-right:4px; }
     .theme-switch { width: 52px; height: 26px; }
     .theme-slider:before { width: 20px; height: 20px; left: 3px; bottom: 3px; }
     .theme-switch input:checked + .theme-slider:before { transform: translateX(26px); }
