@@ -22,18 +22,27 @@
 
 </head>
 
-<body>
+<body id="top" class="has-top-nav">
 
-  <!-- Theme Toggle - Fixed Position -->
-  <div id="theme-toggle-container">
-    <label class="theme-switch" aria-label="Toggle theme">
-      <input type="checkbox" id="theme-toggle">
-      <span class="theme-slider">
-        <span class="theme-icon sun">☀️</span>
-        <span class="theme-icon moon">🌙</span>
-      </span>
-    </label>
-  </div>
+  <nav class="section-nav" aria-label="Section navigation">
+    <div class="section-nav-links">
+      <a href="#bio-section">Bio</a>
+      <a href="#news-section">News</a>
+      <a href="#publications-section">Publications</a>
+      <a href="#experience-section">Experience</a>
+      <a href="#services-section">Services</a>
+      <a href="#awards-section">Awards</a>
+    </div>
+    <div id="theme-toggle-container">
+      <label class="theme-switch" aria-label="Toggle theme">
+        <input type="checkbox" id="theme-toggle">
+        <span class="theme-slider">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </span>
+      </label>
+    </div>
+  </nav>
 
   <div class="ccontent">
     <div class="content heading">
@@ -69,8 +78,8 @@
         </p>
       </div>
     </div>
-    
-    <div class="Bio">
+
+    <div class="Bio" id="bio-section">
       <header>
         <h1 margin="0px" style="color:#008B8B;"> Short Bio</h1>
       </header>
@@ -94,11 +103,12 @@
         I am a member of the <a href="https://sagroups.ieee.org/3161/members/" target="_blank">IEEE Digital Retina Systems Working Group (3161 WG)</a>, and have served as a reviewer for CVPR, ECCV, ICCV, ACM Multimedia, ICML, ICLR, NeurIPS, and AAAI. 
       </p> -->
       <p>
-        My research interests are in AI for science, efficient learning, multimodal learning, and generative learning. Feel free to contact me if you are interested in my research. 
+        I study and build efficient AI systems that can understand and generate complex data across various modalities, with a particular focus on scientific data.
+        <!-- My research interests are in AI for science, efficient learning, multimodal learning, and generative learning. Feel free to contact me if you are interested in my research.  -->
       </p>
     </div>
 
-    <div class="News">
+    <div class="News" id="news-section">
       <header>
         <h1 style="color:#008B8B;"> News</h1>
       </header>
@@ -178,7 +188,7 @@
       </ul>
     </div>
 
-    <div class="Publication">
+    <div class="Publication" id="publications-section">
       <header>
         <h1 id="pubs" style="color:#008B8B;"> Selected Publications and Preprints </h1>
         <a id="sortByYear" class="sort-link" onclick="sortPapers('year')">[Sort by year]</a>
@@ -500,7 +510,7 @@
       </ul>
     </div>
 
-    <div class="Experience">
+    <div class="Experience" id="experience-section">
       <header>
         <h1 style="color:#008B8B;"> Experience</h1>
       </header>
@@ -532,7 +542,7 @@
       </ul>
     </div>
 
-    <div class="Services">
+    <div class="Services" id="services-section">
       <header>
         <h1 style="color:#008B8B;"> Services</h1>
       </header>
@@ -549,7 +559,7 @@
         </li>
     </div>
 
-    <div class="Rewards">
+    <div class="Rewards" id="awards-section">
       <header>
         <h1 style="color:#008B8B;"> Selected Awards</h1>
       </header>
