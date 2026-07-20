@@ -1152,6 +1152,8 @@ html[data-theme="dark"] .paper-visual:hover {
   }
 
   .contact-links {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4px 15px;
   }
@@ -1226,15 +1228,6 @@ html[data-theme="dark"] .paper-visual:hover {
 
   .site-footer {
     padding-bottom: 28px;
-  }
-}
-
-@media (max-width: 420px) {
-  .contact-links {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: center;
-    gap: 6px 16px;
   }
 }
 
