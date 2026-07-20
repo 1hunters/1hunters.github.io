@@ -1115,6 +1115,7 @@ html[data-theme="dark"] .paper-visual:hover {
 
   .hero {
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 22px;
     padding: 30px 0 34px;
   }
@@ -1122,13 +1123,14 @@ html[data-theme="dark"] .paper-visual:hover {
   .hero-copy {
     grid-column: 1;
     grid-row: 2;
+    text-align: center;
   }
 
   .portrait {
     grid-column: 1;
     grid-row: 1;
     width: min(130px, 38vw);
-    justify-self: start;
+    justify-self: center;
   }
 
   .hero h1 {
@@ -1142,6 +1144,7 @@ html[data-theme="dark"] .paper-visual:hover {
   .email-line {
     display: grid;
     gap: 1px;
+    justify-items: center;
   }
 
   .email-line [aria-hidden="true"] {
@@ -1149,6 +1152,7 @@ html[data-theme="dark"] .paper-visual:hover {
   }
 
   .contact-links {
+    justify-content: center;
     gap: 4px 15px;
   }
 
@@ -1229,7 +1233,7 @@ html[data-theme="dark"] .paper-visual:hover {
   .contact-links {
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    justify-content: start;
+    justify-content: center;
     gap: 6px 16px;
   }
 }
