@@ -85,11 +85,15 @@
   </header>
 
   <main class="ccontent" id="main-content">
-    <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy">
+    <aside class="profile-sidebar" aria-label="Profile details">
+        <figure class="portrait">
+          <picture>
+            <source srcset="./assets/img/photo-480.webp" type="image/webp">
+            <img src="./assets/img/photo-480.jpg" alt="Portrait of Chen Tang" width="480" height="600" decoding="async" fetchpriority="high">
+          </picture>
+        </figure>
         <h1 id="page-title">Chen Tang <span lang="zh-Hans">唐辰</span></h1>
-        <p class="hero-role">Ph.D. student, MMLab, The Chinese University of Hong Kong</p>
-        <!-- <p class="hero-thesis"><strong>Research interests:</strong> Efficient AI systems, multimodal learning, and scientific intelligence.</p> -->
+        <p class="hero-role">MMLab, CUHK</p>
         <p class="email-line"><span>chentang [AT] link.cuhk.edu.hk</span><span aria-hidden="true">·</span><span>tangchen18 [AT] outlook.com</span></p>
         <div class="contact-links" aria-label="Academic and social profiles">
           <a href="https://scholar.google.com/citations?user=WjZUs1AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="contact-link">
@@ -109,15 +113,9 @@
             <span>LinkedIn</span>
           </a>
         </div>
-      </div>
-      <figure class="portrait">
-        <picture>
-          <source srcset="./assets/img/photo-480.webp" type="image/webp">
-          <img src="./assets/img/photo-480.jpg" alt="Portrait of Chen Tang" width="480" height="600" decoding="async" fetchpriority="high">
-        </picture>
-      </figure>
-    </section>
+    </aside>
 
+    <div class="main-column">
     <section class="page-section" id="bio-section" aria-labelledby="bio-heading">
       <header class="section-heading">
         <h2 id="bio-heading">Short bio</h2>
@@ -624,6 +622,7 @@
         </ul>
       </div>
     </section>
+    </div>
   </main>
 
   <footer class="site-footer">
