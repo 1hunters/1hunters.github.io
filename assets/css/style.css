@@ -1238,6 +1238,92 @@ html[data-theme="dark"] .paper-visual:hover {
   }
 }
 
+@media (max-width: 900px) and (max-height: 560px) and (orientation: landscape) {
+  .ccontent {
+    display: block;
+  }
+
+  .profile-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+    column-gap: 18px;
+    align-items: center;
+    max-width: none;
+    margin: 0;
+    padding: 20px 0 16px;
+    text-align: left;
+  }
+
+  .portrait {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: 115px;
+    margin: 0;
+  }
+
+  .profile-sidebar h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 3px;
+    font-size: clamp(28px, 3.4vw, 32px);
+  }
+
+  .hero-role {
+    grid-column: 2;
+    grid-row: 2;
+    max-width: none;
+    margin-bottom: 2px;
+    font-size: 12px;
+  }
+
+  .profile-sidebar .email-line {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    margin-bottom: 3px;
+    font-size: 10px;
+  }
+
+  .profile-sidebar .contact-links {
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 2px 15px;
+  }
+
+  .profile-sidebar .contact-link {
+    gap: 5px;
+    padding: 1px 0 3px;
+    font-size: 11px;
+  }
+
+  .profile-sidebar .contact-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .main-column > .page-section:first-child {
+    padding-top: 22px;
+  }
+
+  .page-section {
+    padding: 30px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
